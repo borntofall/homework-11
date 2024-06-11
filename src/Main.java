@@ -2,7 +2,7 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        leapYear(1999);
+        leapYear(1204);
 
         suggestAppVersion(0, 2024);
 
@@ -11,7 +11,7 @@ public class Main {
     }
 
     public static void leapYear(int year) {
-        if ((year > 1584 && year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
+        if ((year > 1582 && year % 400 == 0) || (year > 1582 && year % 4 == 0 && year % 100 != 0)) {
             System.out.printf("%d год является високосным \n", year);
         } else {
             System.out.printf("%d год не является високосным \n", year);
@@ -38,11 +38,13 @@ public class Main {
         if (distance < 20) {
             System.out.printf("Потребуется дней на доставку: %s\n", deliveryDays);
         }
-        if (distance >= 20 && distance < 60) {
-            System.out.printf("Потребуется дней на доставку: %s\n", deliveryDays + 1);
+        if (distance >= 20 && distance < 60){
+            deliveryDays += 1;
+            System.out.printf("Потребуется дней на доставку: %s\n", deliveryDays);
         }
         if (distance >= 60 && distance < 100) {
-            System.out.printf("Потребуется дней на доставку : %s\n", deliveryDays + 2);
+            deliveryDays += 2;
+            System.out.printf("Потребуется дней на доставку : %s\n", deliveryDays);
         }
         if (distance >= 100) {
             System.out.println("Свыше 100 км доставки нет");
