@@ -47,7 +47,6 @@ public class Main {
         }
         if (distance >= 100) {
             System.out.println("Свыше 100 км доставки нет");
-
         }
         return deliveryDays;
     }
