@@ -4,9 +4,9 @@ public class Main {
     public static void main(String[] args) {
         leapYear(1999);
 
-        validType(0, 2024);
+        suggestAppVersion(0, 2024);
 
-        calculateDeliveryDays(50);
+        calculateDeliveryDays(70);
 
     }
 
@@ -19,7 +19,7 @@ public class Main {
         }
     }
 
-    public static void validType(int type, int year) {
+    public static void suggestAppVersion(int type, int year) {
         int currentYear = LocalDate.now().getYear();
         if (type == 0 && year < currentYear) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
