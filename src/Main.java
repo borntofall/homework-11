@@ -15,7 +15,6 @@ public class Main {
             System.out.printf("%d год является високосным \n", year);
         } else {
             System.out.printf("%d год не является високосным \n", year);
-
         }
     }
 
